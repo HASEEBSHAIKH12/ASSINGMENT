@@ -1,0 +1,180 @@
+CODE NO 1:MAKING CALCULATOR:-
+#include <stdio.h>
+
+int main () {
+
+    double num1,num2, result;
+    char operator;
+
+    printf("Enter the first number: ");
+    scanf("%lf", &num1);
+    printf("Emter the second number:");
+    scanf("%lf", &num2);
+    printf("Enter an operator (+,-,*,/):");
+    scanf(" %c", &operator);
+
+    if (operator == '+') {
+        result = num1 + num2;
+        printf("Result: %.2lf + %.2lf  = %.2lf\n", num1, num2, result);
+    } else if (operator == '-') {
+        result = num1 - num2;
+        printf("Result: %.2lf - %.2lf  = %.2lf\n", num1, num2, result);
+    } else if (operator == '*') {
+        result = num1 * num2;
+        printf("Result: %.2lf * %.2lf  = %.2lf\n", num1, num2, result);
+} else if (operator == '/') {
+    if (num2!= 0 ) {
+        result = num1 / num2;
+        printf("Result: %.2lf / %,2lf = %.2lf\n", num1, num2, result);
+    } else {
+        printf("Error: Division by zero is not allowed.\n");
+    }
+    } else {
+        printf("Error : Invalid operator. Please use +,-,*, or /.\n");
+    }
+    return 0;
+    }
+CODE NO 2: EVEN OR ODD CHECKER:-
+#include <stdio.h> 
+#include <conio.h>
+void main() {
+    int number;
+
+    printf("Please enter a number: ");
+    scanf("%d", &number);
+
+    if (number % 2 == 0) {
+        printf("%d is even.\n", number); 
+    } else {
+        printf("%d is odd.\n", number);  
+    }
+    
+    printf("Press any key to continue ...");
+    getchar();
+    getchar();
+    
+    getch();
+}
+CODE NO 3: ELIGIBLITY FOR VOTING
+#include <stdio.h> 
+#include <conio.h>
+void main () {
+    int age;
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if (age >=18) {
+        printf("You are eligible to vote.\n");
+    } else {
+        printf("You are not eligible to vote.\n");
+    }
+    getch();
+
+}
+CODE NO 3: FIND THE LARGEST NO:-
+#include <stdio.h>
+#include <conio.h>
+void main() {
+    
+    int num1, num2, num3;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    int largest;
+
+    if (num1 >= num2) {
+        if (num1 >= num3) {
+            largest = num1;
+        } else {
+            largest = num3; 
+        }
+    } else {
+        if (num2 >= num3) {
+            largest = num2; 
+        } else {
+            largest = num3; 
+        }
+    }
+
+    
+    printf("The largest number is: %d\n", largest);
+
+    getch();
+}
+CODE NO 5:- TEMPRATURE CONVERTER:=
+#include <stdio.h>
+#include <conio.h>
+int main() { 
+float fahrenheit, celsius;
+printf("the temperature in Fahrenheit is 60: ");
+scanf("%f", &fahrenheit);
+
+celsius = (fahrenheit - 32) * 5 / 9;
+
+printf("Temperature in Celsius: %.2f\n", celsius);
+
+getch();
+}
+CODE NO 6: GRADE CALCULATOR:-
+#include <stdio.h>
+
+int main () {
+
+    float english, history , physics, average;
+    char grade;
+
+    printf("enter the grade for english");
+    scanf(" %f ", &english );
+    
+    printf("enter the grade for history");
+    scanf(" %f ", &history );
+
+    printf("enter the grade for physics");
+    scanf(" %f ", &physics );
+
+    average = (english +  history +  physics  ) / 3;
+    
+    if (grade >= 90 );{
+    grade = 'A+';
+    } if  (average >= 80) {
+    grade = 'A';
+    } else if  (average >= 70) {
+    grade = 'B';
+    } else if (average >= 60) {
+        grade = 'C';
+    } else {
+        grade = 'D';
+    }
+
+    printf("Average Marks ; %.2lf , average");
+    printf("Grade:  %c\n", grade);
+
+    return 0;
+} 
+CODE NO 7:DISCOUNT CALCULATOR:-
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+    float totalAmount, finalAmount;
+    float discount;
+
+    printf("Enter the total shopping amount: ");
+    scanf("%f", &totalAmount);
+
+    if (totalAmount > 5000) {
+        discount = 0.20; 
+    } else if (totalAmount >= 3000) {
+        discount = 0.10; 
+    } else {
+        discount = 0.0; 
+    }
+
+    finalAmount = totalAmount - (totalAmount * discount);
+
+    printf("Final amount after discount: %.2f\n", finalAmount);
+
+    getch();
+}
